@@ -2,6 +2,7 @@ import { Component, OnInit, Inject } from '@angular/core';
 import { IonicPage, NavController, NavParams, ItemSliding, ToastController, LoadingController, AlertController } from 'ionic-angular';
 import { FavoriteProvider } from '../../providers/favorite/favorite';
 import { Dish } from '../../shared/dish';
+import { Storage } from '@ionic/storage';
 
 /**
  * Generated class for the FavoritesPage page.
@@ -24,7 +25,8 @@ export class FavoritesPage implements OnInit {
     @Inject('BaseURL') private BaseURL,
     public toastCtrl: ToastController,
     private loadingCtrl: LoadingController,
-    private alertCtrl: AlertController) {
+    private alertCtrl: AlertController,
+    private storage: Storage) {
   }
 
   ngOnInit() {
