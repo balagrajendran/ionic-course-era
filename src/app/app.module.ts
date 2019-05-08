@@ -5,6 +5,7 @@ import { HttpModule } from '@angular/http';
 import { IonicStorageModule } from '@ionic/storage';
 import { LocalNotifications } from '@ionic-native/local-notifications';
 import { Camera } from '@ionic-native/camera';
+import { Network } from '@ionic-native/network';
 import { RegisterPage } from '../pages/register/register';
 
 import { baseURL } from '../shared/baseurl';
@@ -74,7 +75,8 @@ import { FavoriteProvider } from '../providers/favorite/favorite';
     ProcessHttpmsgProvider,
     FavoriteProvider,
     LocalNotifications,
-    Camera
+    Camera,
+    Network
   ]
 })
 export class AppModule {}
