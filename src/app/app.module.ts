@@ -3,6 +3,9 @@ import { ErrorHandler, NgModule } from '@angular/core';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 import { HttpModule } from '@angular/http';
 import { IonicStorageModule } from '@ionic/storage';
+import { LocalNotifications } from '@ionic-native/local-notifications';
+import { Camera } from '@ionic-native/camera';
+import { RegisterPage } from '../pages/register/register';
 
 import { baseURL } from '../shared/baseurl';
 
@@ -37,7 +40,8 @@ import { FavoriteProvider } from '../providers/favorite/favorite';
     FavoritesPage,
     ReservationPage,
     CommentPage,
-    LoginPage
+    LoginPage,
+    RegisterPage
   ],
   imports: [
     BrowserModule,
@@ -56,7 +60,8 @@ import { FavoriteProvider } from '../providers/favorite/favorite';
     FavoritesPage,
     ReservationPage,
     CommentPage,
-    LoginPage
+    LoginPage,
+    RegisterPage
   ],
   providers: [
     StatusBar,
@@ -67,7 +72,9 @@ import { FavoriteProvider } from '../providers/favorite/favorite';
     LeaderProvider,
     PromotionProvider,
     ProcessHttpmsgProvider,
-    FavoriteProvider
+    FavoriteProvider,
+    LocalNotifications,
+    Camera
   ]
 })
 export class AppModule {}
