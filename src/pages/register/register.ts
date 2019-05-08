@@ -66,10 +66,26 @@ export class RegisterPage {
     });
   }
 
+  getFromLibrary() {
+    let cameraOptions = {
+      sourceType: this.camera.PictureSourceType.PHOTOLIBRARY,
+      destinationType: this.camera.DestinationType.FILE_URI,      
+      quality: 100,
+      targetWidth: 1000,
+      targetHeight: 1000,
+      encodingType: this.camera.EncodingType.JPEG,      
+      correctOrientation: true
+    }
+  
+    this.camera.getPicture(cameraOptions)
+    .then(file_uri => this.image = file_uri, 
+      err => console.log(err));  
+  }
+
   onSubmit() {
     console.log(this.registerForm.value);
     this.dismiss();
   }
-  
+
 
 }
