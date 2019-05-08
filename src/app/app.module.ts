@@ -6,6 +6,7 @@ import { IonicStorageModule } from '@ionic/storage';
 import { LocalNotifications } from '@ionic-native/local-notifications';
 import { Camera } from '@ionic-native/camera';
 import { Network } from '@ionic-native/network';
+import { CallNumber } from '@ionic-native/call-number';
 import { RegisterPage } from '../pages/register/register';
 
 import { baseURL } from '../shared/baseurl';
@@ -76,7 +77,8 @@ import { FavoriteProvider } from '../providers/favorite/favorite';
     FavoriteProvider,
     LocalNotifications,
     Camera,
-    Network
+    Network,
+    CallNumber
   ]
 })
 export class AppModule {}
